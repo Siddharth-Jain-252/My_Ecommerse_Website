@@ -8,6 +8,10 @@ import lombok.*;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class CartItem {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long cartItemId;
     
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(
